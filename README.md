@@ -1,5 +1,4 @@
-/
-dcast Download!
+# Podcast Download!
 A docker-compose and dockerfile that will run a node-cron task to download radio shows, make a podcast / RSS feed for them, and publish them to s3 (or digitalocean's spaces).
 
 
