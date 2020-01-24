@@ -41,14 +41,4 @@ var convert = async function(filePath, inFormat, outFormat) {
   });
 };
 
-var test = function() {
-  convert('/config/download-stream/ds89j', 'aac')
-    .catch(function(e) {
-      console.log('e', e);
-    })
-    .then(function(r) {
-      console.log('r', r);
-    });
-};
-
 module.exports = convert;
