@@ -1,0 +1,17 @@
+{
+  "name": "download-stream",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "aws-sdk": "2.609.0",
+    "cron": "1.8.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "moment-timezone": "^0.5.27",
+    "node-id3": "0.1.13",
+    "npm-check-updates": "^4.0.1",
+    "request": "^2.88.0",
+    "xml-js": "^1.6.11"
+  }
+}

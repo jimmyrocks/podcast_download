@@ -1,2 +1,3 @@
-./podcasts.env
-./podcasts/download-stream/streamConfigs.json
+podcasts.env
+podcasts/download-stream/streamConfigs.json
+podcasts/download-stream/node_modules

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  podcasts:
+    restart: always
+    build:
+      context: ./podcasts
+      dockerfile: ./Dockerfile
+    env_file:
+      - podcasts.env
+    volumes:
+      - ./podcasts/:/config
