@@ -36,7 +36,7 @@ var times = function(start, lengthInMin, timezone) {
 
 var getFileSize = function(filePath) {
   return new Promise(function(resolve) {
-    fs.stat(filePath, function(e, r) {
+    fs.stat(filePath, (e, r) => {
       resolve(r.size);
     });
   });
@@ -44,7 +44,7 @@ var getFileSize = function(filePath) {
 
 var deleteFile = function(filePath) {
   return new Promise(function(resolve, reject) {
-    fs.unlink(filePath, function(e, r) {
+    fs.unlink(filePath, (e, r) => {
       e ? reject(e) : resolve(r);
     });
   });
@@ -54,7 +54,7 @@ var downloadImage = async function(url) {
   return new Promise(function(resolve, reject) {
     request.get(url, {
       encoding: null
-    }, function(err, res, file) {
+    }, (err, res, file) => {
       if (err) {
         resolve(null);
       } else {
