@@ -15,7 +15,7 @@ var runCommand = function(cmd, args) {
     console.log('start streaming: ', cmd, args);
     // child.stdout.on('data', function (buffer) { console.log(buffer.toString('utf8')) });
     // child.stderr.on('data', function (buffer) { console.log(buffer.toString('utf8')) });
-    child.stdout.on('end', function() {
+    child.stdout.on('end', () => {
       console.log('done streaming');
       resolve();
     });
