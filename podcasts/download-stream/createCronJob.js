@@ -25,7 +25,7 @@ var createCronJob = function(streamConfig) {
     streamConfig.timezone,
     streamConfig.bufferSeconds);
   console.log('   ', expression, '[' + streamConfig.timezone + ']');
-  return new CronJob(expression, function() {
+  return new CronJob(expression, () => {
     getStream(streamConfig)
   }, null, true, streamConfig.timezone);
 };
