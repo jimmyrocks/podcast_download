@@ -8,9 +8,8 @@ var convert = async function(filePath, inFormat, outFormat) {
   outFormat = outFormat || 'mp3';
   return new Promise((resolve, reject) => {
     if (inFormat === undefined || inFormat === outFormat) {
-      return filePath;
+      resolve(filePath);
     } else {
-      // console.log('a');
       var inFile = filePath + '.' + inFormat;
       var outStream = fs.createWriteStream(filePath + '.' + outFormat);
       promisify(fs.rename)(filePath, inFile).then(x => {
